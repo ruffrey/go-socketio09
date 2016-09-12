@@ -1,3 +1,5 @@
+API is unstable! Beware.
+
 # Golang Socket.IO 0.9.x Client
 
 Socket.IO is a protocol for framing and acking messages over a web socket.
