@@ -1,0 +1,22 @@
+{
+  "name": "socket.io-09-examples",
+  "version": "1.0.0",
+  "description": "A minimal test server for socket.io 0.9",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Jeff H. Parrish <jeffhparrish@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/ruffrey/go-socketio-09"
+  },
+  "dependencies": {
+    "socket.io": "^0.9.17"
+  },
+  "engines": {
+    "node": ">=0.10.0",
+    "npm": ">=2.0.0"
+  }
+}
