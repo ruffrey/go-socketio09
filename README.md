@@ -29,13 +29,13 @@ go run basic-client.go
 
 ## Implemented
 
-- emit events, and receive ack
+- emit json events, and receive json ack
 - listen for events
 
 ## Unimplemented
 
-- send text, json messages
-- emit events to "message endpoints"
+- send regular text, json messages (not emitted events) to other socket.io endpoints
+- handling some message types: 3, 4, 7
 
 ## Known Issues
 
