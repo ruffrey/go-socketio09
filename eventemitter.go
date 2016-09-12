@@ -94,7 +94,7 @@ func (m *eventEmitter) checkAndFireListenersForValidMessage(c *SocketIOConnectio
 		err := json.Unmarshal([]byte(msg.Args), &data)
 
 		if err != nil {
-			log.Println(err, msg)
+			log.Println(err, "likely msg was not valid json")
 			return
 		}
 
@@ -103,7 +103,7 @@ func (m *eventEmitter) checkAndFireListenersForValidMessage(c *SocketIOConnectio
 	case spec.Ack:
 		listener, err := c.acks.getListener(msg.AckID)
 		if err != nil {
-			log.Println(err, msg)
+			log.Println(err, "likely msg was not valid json")
 			return
 		}
 		listener <- msg.Args

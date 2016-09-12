@@ -69,7 +69,6 @@ func getInboundMessageType(data string) (string, error) {
 
 // DecodeInboundMessage takes the socketio encoded frame and turns it into a client *Message
 func DecodeInboundMessage(data string) (*Message, error) {
-	log.Println("decoding:", data)
 	var err error
 	m := &Message{}
 
@@ -85,7 +84,7 @@ func DecodeInboundMessage(data string) (*Message, error) {
 
 	ackID, rest, err := getAckAndDataFromIncomingMessageText(data)
 	if err != nil {
-		log.Println(err, data)
+		log.Println("inbound msg decode failed:", err)
 		return m, err
 	}
 	if m.Type == spec.Event {
